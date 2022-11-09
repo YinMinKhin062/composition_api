@@ -4,13 +4,17 @@
     <h3>{{ postDetail.title }}</h3>
     <p>{{ postDetail.body }}</p>
   </div>
-  <div v-else>Loading</div>
+  <div v-else>Loading
+    <Spinner></Spinner>
+  </div>
 </template>
 
 <script>
+import Spinner from '../components/Spinner'
 import getPostDetail from "../Composable/getPostDetail";
 
 export default {
+  components: { Spinner },
   props: ["id"],
   setup(props) {
     let { postDetail, err, loadPostDetail } = getPostDetail(props.id);

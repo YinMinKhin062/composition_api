@@ -9,6 +9,11 @@ let getPost = () => {
 
     let load = async () => {
         try {
+
+            await new Promise((resolve,reject)=>{
+                //resolve()
+                setTimeout(resolve,2000);
+            })
             let response = await fetch("http://localhost:3000/posts");
             // console.log(response);
             if (response.status == 404) {

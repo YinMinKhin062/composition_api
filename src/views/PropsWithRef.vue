@@ -6,14 +6,19 @@
   <div v-else-if="posts.length > 0">
     <PostList :posts="posts"></PostList>
   </div>
-  <div v-else>Loading .....</div>
+  <div v-else>
+    Loading .....
+    <Spinner></Spinner>
+
+  </div>
 </template>
 
 <script>
+import Spinner from "../components/Spinner";
 import PostList from "../components/PostList";
 import getPost from "../Composable/getPost";
 export default {
-  components: { PostList },
+  components: { PostList,Spinner },
   setup() {
     // destructure and composable function
     let { posts, error, load } = getPost();
