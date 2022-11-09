@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <br />
+    <input type="text" v-model="search" /><br /><br />
+    Search Item : {{ search }}<br />
+
+    <ul v-for="name in filteredName" :key="name">
+      <li>{{ name }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { ref } from "@vue/reactivity";
+import { computed } from "@vue/runtime-core";
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+  name: "home",
+  setup() {
+    let search = ref("");
+
+    let names = ref(["YMK", "TNY", "Ma Ma", "Hla Hla", "Khin Khin"]);
+
+    let filteredName = computed(() => {
+      return names.value.filter((name) => {
+        return name.includes(search.value);
+      });
+    });
+
+    // console.log(filteredName.value);
+    return { names, search, filteredName };
+  },
+};
 </script>

@@ -1,0 +1,19 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Post Title1",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas deserunt et totam recusandae sunt assumenda ab! Quaerat quo, commodi ipsam est cum in voluptate nobis repellendus odio tempora impedit reprehenderit ad saepe ab adipisci repellat laborum tempore magni laudantium doloremque similique expedita cupiditate ut a. Facilis culpa facere placeat tempore sit minus natus harum, saepe architecto iusto esse eos doloribus omnis porro? Quam velit harum expedita sed nam. Adipisci cupiditate quidem magnam culpa nemo ipsam, sint, ullam saepe nobis quaerat numquam inventore amet, mollitia minus. Laudantium, nesciunt ducimus? Fuga mollitia minus harum aut quas eligendi exercitationem aspernatur voluptatum vero vel?"
+        },
+        {
+            "id": 2,
+            "title": "Post Title2",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas deserunt et totam recusandae sunt assumenda ab! Quaerat quo, commodi ipsam est cum in voluptate nobis repellendus odio tempora impedit reprehenderit ad saepe ab adipisci repellat laborum tempore magni laudantium doloremque similique expedita cupiditate ut a. Facilis culpa facere placeat tempore sit minus natus harum, saepe architecto iusto esse eos doloribus omnis porro? Quam velit harum expedita sed nam. Adipisci cupiditate quidem magnam culpa nemo ipsam, sint, ullam saepe nobis quaerat numquam inventore amet, mollitia minus. Laudantium, nesciunt ducimus? Fuga mollitia minus harum aut quas eligendi exercitationem aspernatur voluptatum vero vel?"
+        },
+        {
+            "id": 3,
+            "title": "Post Title3",
+            "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas deserunt et totam recusandae sunt assumenda ab! Quaerat quo, commodi ipsam est cum in voluptate nobis repellendus odio tempora impedit reprehenderit ad saepe ab adipisci repellat laborum tempore magni laudantium doloremque similique expedita cupiditate ut a. Facilis culpa facere placeat tempore sit minus natus harum, saepe architecto iusto esse eos doloribus omnis porro? Quam velit harum expedita sed nam. Adipisci cupiditate quidem magnam culpa nemo ipsam, sint, ullam saepe nobis quaerat numquam inventore amet, mollitia minus. Laudantium, nesciunt ducimus? Fuga mollitia minus harum aut quas eligendi exercitationem aspernatur voluptatum vero vel?"
+        }
+    ]
+}

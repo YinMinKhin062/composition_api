@@ -1,9 +1,10 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="{ name: 'home' }">Computed with Ref</router-link>
+    | <router-link :to="{ name: 'PropsWithRef' }">Props with Ref</router-link>
+
+    <router-view />
   </nav>
-  <router-view/>
 </template>
 
 <style>
@@ -20,6 +21,8 @@ nav {
 }
 
 nav a {
+  flex: inline-block;
+  text-decoration: none;
   font-weight: bold;
   color: #2c3e50;
 }
