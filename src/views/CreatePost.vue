@@ -49,7 +49,7 @@ export default {
 
 <style>
 .tag p{
-        display: inline-block;
+            display: inline-block;
             border-radius: 0.4rem;
             background: lightblue;
             padding: 5px 10px 5px 10px;
