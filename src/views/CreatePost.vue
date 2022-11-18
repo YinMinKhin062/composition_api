@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-">
-<form @submit.prevent="">
+<form @submit.prevent="addPost">
     <div class="mb-3">
         <label for="title">Title</label>
         <input type="title" v-model="title" class="form-control" id="title" name="title" required>
@@ -27,8 +27,15 @@
 
 <script>
 import { ref } from '@vue/reactivity'
+import {useRouter} from 'vue-router'
+import {db} from '../firebase/config'
+import { addDoc, collection } from '@firebase/firestore'
+
+
 export default {
     setup(){
+        let router=useRouter();//this.$router
+
         let body=ref("");
         let title=ref("");
         let tag=ref("");
@@ -40,7 +47,52 @@ export default {
             }
             // tag.value="";
         }
-        return {body,title,tag,tags,handleKeyDown};
+
+
+        let addPost=async()=>{
+            let newPost={
+                body:body.value,
+                title:title.value,
+                tags:tags.value
+            }
+
+            // start of json fetch with post method
+            // await fetch('http://localhost:3000/posts',
+            // {
+            //     method:'POST',
+            //     headers:{'content-type':'application/json'},
+            //     body:JSON.stringify({
+            //         body:body.value,
+            //         title:title.value,
+            //         tags:tags.value
+            //     })
+            // })
+            // end of json fetch with post mehtod
+
+
+            // start of inserting posts to firebase collection
+          try{
+                let dbRef=collection(db,"posts");
+                let res =await addDoc(dbRef,newPost)
+                console.log(res); 
+          }catch(e){
+                console.log(e.message);
+          }
+          
+
+
+
+
+
+
+            // redirect from create to post page
+                router.push('/')
+        }
+
+
+
+
+        return {body,title,tag,tags,addPost,handleKeyDown};
 
     }
 

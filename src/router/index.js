@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import PropsWithRef from '../views/PropsWithRef.vue'
 import PostDetail from '../views/PostDetail.vue'
 import CreatePost from '../views/CreatePost.vue'
-
+import Tag from '../views/Tag';
 const routes = [
   {
     path: '/',
@@ -26,6 +26,12 @@ const routes = [
     name: 'CreatePost',
     component: CreatePost,
   },
+  {
+    path:'/tags/:tag',
+    name:'Tag',
+    component:Tag,
+    props:true,
+  }
 
 ]
 
